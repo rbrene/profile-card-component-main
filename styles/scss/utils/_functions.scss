@@ -1,0 +1,18 @@
+@use 'sass:math';
+@function rem($unit) {
+    @if math.is-unitless($unit) {
+        @return math.div($unit, 16)+rem;
+    }
+    @else {
+        @error 'Units are not allowed.';
+    }
+}
+
+@function em($unit) {
+    @if math.is-unitless($unit) {
+        @return math.div($unit, 16)+em;
+    }
+    @else {
+        @error 'Units are not allowed.';
+    }
+}

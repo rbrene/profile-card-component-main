@@ -17,4 +17,3 @@
 .prettierignore
 .history/
 .vscode/
-node_modules/

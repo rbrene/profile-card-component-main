@@ -1,0 +1,182 @@
+@use '../utils/functions' as f;
+@use '../utils/breakpoints' as b;
+html {
+    font-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    position: relative;
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: var(--darkCyan);
+    color: var(--darkGrayishBlue);
+    z-index: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    span {
+        font-weight: 400;
+    }
+}
+
+p {
+    margin: 0;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    z-index: inherit;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: f.rem(978);
+        height: f.rem(976);
+        background: url('../../../images/bg-pattern-top.svg');
+        transform: rotateZ(45deg) translateY(f.em(-157)) translateX(f.em(-623));
+        @include b.breakpointDown(small) {
+            transform: rotateZ(45deg) translateY(f.em(-12.992)) translateX(f.em(-926.992));
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: f.rem(978);
+        height: f.rem(976);
+        background: url('../../../images/bg-pattern-bottom.svg');
+        transform: rotateZ(45deg) translateY(f.em(274.304)) translateX(f.em(716.544));
+        @include b.breakpointDown(small) {
+            transform: rotateZ(45deg) translateY(f.em(162.304)) translateX(f.em(876.544));
+        }
+    }
+}
+
+.card {
+    position: relative;
+    max-width: f.rem(350);
+    height: f.rem(374);
+    display: grid;
+    grid-template-columns: repeat(auto, auto);
+    overflow: hidden;
+    z-index: 100;
+    @include b.breakpointDown(small) {
+        max-width: f.rem(326);
+    }
+    &__banner {
+        position: relative;
+        width: 100%;
+        height: f.rem(140);
+        &.banner {
+            position: relative;
+            width: 100%;
+            height: f.rem(140);
+        }
+        .card__image {
+            position: relative;
+            bottom: 50px;
+            width: f.rem(96);
+            height: f.rem(96);
+            margin: 0 auto;
+            border-radius: 50%;
+            border: f.rem(5) solid #fff;
+            overflow: hidden;
+            .profile__image {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-grid;
+        place-content: center;
+        place-items: center;
+        gap: f.rem(8);
+        padding: f.rem(16) 0;
+    }
+    &__footer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-grid;
+        grid-template-columns: repeat(3, auto);
+        .footer__item {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            place-content: center;
+            place-items: center;
+            gap: f.rem(9);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background: var(--lightGrayishColor);
+        }
+    }
+}
+
+.footer__amount {
+    font-size: f.rem(18);
+    color: var(--darkerGrayishBlue);
+}
+
+.footer__text {
+    font-size: f.rem(10);
+    letter-spacing: f.rem(1.5);
+    opacity: 0.8;
+}
+
+.profile {
+    background: #fff;
+    color: var(--grey);
+    font-size: f.rem(18);
+    border-radius: f.rem(15);
+    box-shadow: 0px f.rem(50) f.rem(100) f.rem(-20) rgb(8, 70, 94, 0.548);
+    &__basic {
+        font-weight: 400;
+        color: var(--darkerGrayishBlue);
+    }
+    &__name {
+        font-weight: 700;
+    }
+    &__city {
+        opacity: 0.6;
+    }
+}

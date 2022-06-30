@@ -1,0 +1,16 @@
+@use '../utils/functions' as f;
+// mobile 375
+// desktop 1440
+$breakpointsUp: ('medium': f.em(640), 'large': f.em(1440));
+@mixin breakpointUp($size) {
+    @media (min-width: map-get($breakpointsUp, $size)) {
+        @content;
+    }
+}
+
+$breakpointsDown: ('small': f.em(639.98), 'large': f.em(139.98));
+@mixin breakpointDown($size) {
+    @media (max-width: map-get($breakpointsDown, $size)) {
+        @content;
+    }
+}
