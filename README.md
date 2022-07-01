@@ -47,8 +47,8 @@ As mentioned I had a bit of trouble with CSS position so I would see myself havi
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [raeesbrene](https://www.your-site.com)
+- Frontend Mentor - [@rbrene](https://www.frontendmentor.io/profile/rbrene)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
