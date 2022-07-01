@@ -24,7 +24,7 @@ This is my solution to the [Profile card component challenge on Frontend Mentor]
 
 ### Preview
 
-[Solution Preview](./images/solution-preview.jpg)
+![Solution Preview](./images/solution-preview.jpg)
 
 ## My process
 I completed the challenge using scss which was fun but i had a bit of trouble with css positioning but it really turned out great.
