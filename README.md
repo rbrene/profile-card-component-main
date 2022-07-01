@@ -50,8 +50,6 @@ As mentioned I had a bit of trouble with CSS position so I would see myself havi
 - Website - [raeesbrene](https://www.your-site.com)
 - Frontend Mentor - [@rbrene](https://www.frontendmentor.io/profile/rbrene)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
 A big thank you to the FrontEndMentor platform in improve my skills.
